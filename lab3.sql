@@ -24,3 +24,22 @@ values('s1@jmu.edu','c1'),
     ('s4@jmu.edu','c2'),
     ('s2@jmu.edu','c3'),
     ('s3@jmu.edu','c3')
+
+--q2.5
+insert into professor(p_email,p_name,office)
+values('p3@jmu.edu','p3','o3');
+
+insert into course(c_number,c_name,room,p_email)
+ values('c4','facebook','r1','p3@jmu.edu')
+
+--Q1: you need to add the new professor data to the professor table first becuase p_email is a forign key in course table so you need to have it exist in the professor table first
+
+--q2.6 
+--Q2: you need to update course first beucase otherwise there will be a course in the system with no professor
+
+Update course
+set p_email = 'p3@jmu.edu'
+where p_email = 'p1@jmu.edu'
+
+
+
