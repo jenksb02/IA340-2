@@ -41,5 +41,23 @@ Update course
 set p_email = 'p3@jmu.edu'
 where p_email = 'p1@jmu.edu'
 
+--q2.7 
+select * from enroll
+
+--2.8
+select c_number, count(s_email) as "course enrollment numbers" 
+from enroll
+group by c_number
+having c_number='c1'
+
+--2.9
+select p_email,c_name
+from course
+
+--2.10
+select p_email, count(c_name) as "number of courses taught"
+from course
+group by p_email
+having p_email='p3@jmu.edu'
 
 
